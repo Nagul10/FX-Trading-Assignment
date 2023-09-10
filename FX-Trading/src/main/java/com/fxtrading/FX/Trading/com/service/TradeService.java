@@ -10,7 +10,6 @@ public class TradeService {
 		String message;
 		String bookMessage;
 		if(!trade.getCurrencyPair().equalsIgnoreCase("USDINR")) {
-//			trade.setMessage("Invalid Currency Pair Trade Not Booked");
 			return null;
 		}
 		trade.setTransferredAmount(trade.getAmountToTransfer()*trade.getUSDINR());
@@ -26,7 +25,6 @@ public class TradeService {
 		} else {
 			bookMessage = "\nBooking Cancelled";
 		}
-		//trade.setMessage(message+bookMessage);
 		return message+bookMessage;
 	}
 }
